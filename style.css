@@ -1,0 +1,377 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: 'Manrope';
+  font-weight: 600, 800;
+}
+
+body{
+  min-height: 100;
+  background-color: url(./images/pattern-circles.svg);
+}
+
+.container-frame{
+  display: flex;
+  /* min-height: 100; */
+  margin: 10% 5%;
+  box-shadow :1px 1px 1px 2px #8b8b8b59;
+  justify-self: center;
+  align-self: center;
+  background-image: url(./images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 55%;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  background-color:  hsl(230, 100%, 99%);
+}
+
+.billing-box-header{
+  background-image: url(./images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position:center;
+  height: 10rem;
+  /* height: 500px; */
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  justify-content:center;
+  align-items: center;
+  /* justify-items: space-between; */
+  margin-bottom:5rem;
+  margin-top:4rem;
+}
+
+.billing-box-header h2{
+  color: hsl(227, 35%, 25%);
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: "Manrope", sans-serif;
+}
+
+.billing-box-header p{
+  color: hsl(225, 20%, 60%);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top:0.5rem;
+}
+
+.billing-box-container{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  height:350px;
+  background: #fff;
+  /* margin-bottom: 900rem; */
+  /* border-style: solid; */
+  box-shadow: 0px 10px 10px 10px hsla(225, 20%, 60%, 0.13);
+  border-radius: 10px;
+  margin-bottom: 10rem;
+  /* margin-top:10rem; */
+}
+
+.page-view-checker{
+  display: flex;
+  justify-content: space-around;
+align-items: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.slider-box{
+  display: flex;
+  width: 80%;
+  margin-top: -1rem;
+}
+
+.slider{
+  width:100%;
+ /* overflow: hidden; */
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background-color:  hsl(0, 0%, 97%);
+  border-radius: 10px;
+  margin: auto;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+ .slider::-moz-range-thumb{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: url(./images/icon-slider.svg);
+  background-color: hsl(174, 86%, 45%);
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-color: hsl(174, 86%, 45%);
+  cursor: pointer;
+ }
+  
+ .slider::-moz-range-thumb:hover{
+   box-shadow:0px 10px 20px 2px hsla(174, 86%, 45%, 0.562);
+   background-color: hsla(174, 86%, 45%, 0.815);
+ }  
+
+ .slider::-moz-range-thumb:active{
+ box-shadow:0px 10px 20px 2px hsla(174, 86%, 45%, 0.562);
+   background-color: hsla(174, 86%, 45%, 0.986);
+ }
+
+ .slider::-webkit-slider-range-progress {
+  -webkit-appearance: none;
+  height: 8px;
+  color: white;
+}
+
+input[type="range"]::-moz-range-progress {
+  background-color:hsl(174, 77%, 80%);
+  height:8px;
+}
+
+.page-view{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 15px;
+  font-weight: 700;
+  color:hsl(225, 20%, 60%);
+  margin-left: 1rem;
+}
+
+.page-view span{
+  font-size: 16px;
+}
+
+.dynamic-month{
+  display: flex;
+  align-items: center;
+  font-size:16px;
+  color:hsl(225, 20%, 60%)
+}
+
+.dynamic-month span{
+  font-size: 2.8rem;
+  font-family: 'Manrope';
+  font-weight:800;
+  color:hsl(227, 35%, 25%);
+  margin-right: 1rem;
+}
+
+.billing-checker{
+  display: flex;
+  align-items: center;
+  color: hsl(225, 20%, 60%);
+  justify-content: flex-end;
+  width: 80%;
+}
+
+.billing-checker p{
+  font-size:12px;
+  margin-left: 1rem;
+}
+
+.billing-checker span{
+  margin-left:0.5rem;
+  margin-right: 2rem;
+  color:hsl(15, 100%, 70%);
+  border-radius:10px;
+  font-weight: 600;
+  background-color:rgba(255, 140, 102, 0.082);
+  font-size:12px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.billing-checker input{
+  color: rgb(255, 255, 255);
+  background-color: #e4e4;
+}
+
+.switcher{
+  display: flex;
+  position: relative;
+  margin-left:1rem;
+}
+
+input[type="checkbox"] {
+  position:absolute; 
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 20px;
+  opacity: 0;
+  z-index: 1;
+  /* visibility: hidden; */
+}
+
+label {
+  width: 40px;
+  height: 20px;
+  display:block;
+  background-color: hsl(224, 65%, 95%);
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+  /* box-shadow: 0 0 20px #22fca850; */
+}
+
+label::after {
+  display: flex;
+  align-content: center;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  position: absolute;
+  border-radius: 70px;
+  top: 2.5px;
+  left: 4px;
+  transition: 0.5s;
+}
+
+input:checked + label:after {
+  left: calc(100% - 20px);
+  transform: translateX(-0%) ease-in-out;
+}
+
+input:checked + label {
+  background-color: hsl(174, 86%, 45%);
+}
+
+label:active:after {
+  width: 16px;
+}
+
+.lower-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  border-top: 1px solid hsla(225, 20%, 60%, 0.301);
+  padding-top:2rem;
+}
+
+.offer-info{
+ margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: hsl(225, 20%, 60%);
+}
+
+.offer-info p{
+  font-size:12px;
+  margin-top: 0.5rem;
+}
+
+.offer-info i{
+  color: hsl(174, 86%, 45%);
+  padding-right: 1rem;
+  font-size: 12px;
+}
+
+.start-trial-button{
+  display: flex;
+  width: 10rem;
+  height: 2.5rem;
+  border-radius: 50px;;
+  background-color:hsl(227, 35%, 25%);
+  color: hsl(224, 65%, 95%);
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  cursor: pointer;
+  margin-right: 3rem;
+  font-size: 12px;
+}
+
+.display-mobile-discount{
+  display: none;
+}
+
+@media screen and (max-width: 376px){
+/* .container-frame{
+  justify-self: center;
+  width:100%;
+} */
+
+.billing-box-header h2{
+ font-size:1.4rem;
+}
+
+.billing-box-container{
+  position: relative;
+  height:450px;
+}
+
+.slider-box{
+margin-top: -3rem;
+width:90%;
+}
+
+.dynamic-month{
+  position: absolute;
+  top:10rem;
+}
+
+.dynamic-month .cost{
+  font-size:2rem;
+}
+
+.billing-box-header p{
+  text-align:center;
+  font-size: 12px;
+  width: 60%;
+}
+
+.billing-box-container{
+  width: 90%;
+  height: 450px;
+  margin-top: -3rem;
+}
+
+.billing-checker{
+  width: 100%;
+  margin-bottom: -5rem;
+}
+
+.billing-checker p{
+  font-size:10px;
+}
+
+.discount-span{
+  display:none;
+}
+
+.display-mobile-discount{
+  display:block;
+  margin:1rem;
+}
+
+.lower-container{
+  flex-direction:column;
+  text-align:end;
+  padding-top:15px;
+  justify-items: flex-end;
+}
+
+.offer-info{
+  text-align:center
+}
+
+.start-trial-button{
+  align-content:center;
+  margin-right: 0;
+  margin-top: 2rem;
+}
+}
